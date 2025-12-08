@@ -13,7 +13,6 @@ export default defineConfig(({ mode }) => {
       react(),
       VitePWA({
         registerType: 'autoUpdate',
-        includeAssets: ['vite.svg', 'icon-192.png', 'icon-512.png'],
         manifest: {
           name: 'SelfLook AR',
           short_name: 'SelfLook',
@@ -25,26 +24,6 @@ export default defineConfig(({ mode }) => {
           display: 'standalone',
           orientation: 'portrait',
           categories: ['shopping', 'lifestyle', 'productivity'],
-          icons: [
-            {
-              src: '/vite.svg',
-              sizes: 'any',
-              type: 'image/svg+xml',
-              purpose: 'any maskable'
-            },
-            {
-              src: '/icon-192.png',
-              type: 'image/png',
-              sizes: '192x192',
-              purpose: 'any maskable'
-            },
-            {
-              src: '/icon-512.png',
-              type: 'image/png',
-              sizes: '512x512',
-              purpose: 'any maskable'
-            }
-          ]
         }
       })
     ],
