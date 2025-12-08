@@ -24,6 +24,63 @@ export default defineConfig(({ mode }) => {
           display: 'standalone',
           orientation: 'portrait',
           categories: ['shopping', 'lifestyle', 'productivity'],
+        },
+        workbox: {
+          runtimeCaching: [
+            {
+              urlPattern: /^https?:\/\/esm\.sh\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'esm-sh-cache',
+                expiration: {
+                  maxEntries: 100,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https?:\/\/cdn\.tailwindcss\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'tailwind-cdn-cache',
+                expiration: {
+                  maxEntries: 1,
+                  maxAgeSeconds: 60 * 60 * 24 * 365
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https?:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: 'StaleWhileRevalidate',
+              options: {
+                cacheName: 'google-fonts-stylesheets',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 7 // A week
+                }
+              }
+            },
+            {
+              urlPattern: /^https?:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'google-fonts-webfonts',
+                expiration: {
+                  maxEntries: 30,
+                  maxAgeSeconds: 60 * 60 * 24 * 365
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            }
+          ]
         }
       })
     ],
