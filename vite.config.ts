@@ -21,7 +21,6 @@ export default defineConfig(({ mode }) => {
           background_color: '#ffffff',
           start_url: '/',
           scope: '/',
-          id: '/',
           display: 'standalone',
           orientation: 'portrait',
           categories: ['shopping', 'lifestyle', 'productivity'],
@@ -44,8 +43,7 @@ export default defineConfig(({ mode }) => {
           screenshots: [
             {
               src: '/images/screenshots/screenshots-1.png',
-              type: 'image/png',
-              sizes: '1080x1920' // Example size, adjust if needed
+              type: 'image/png'
             }
           ]
         },
