@@ -25,6 +25,8 @@ export default defineConfig(({ mode }) => {
           display: 'standalone',
           orientation: 'portrait',
           categories: ['shopping', 'lifestyle', 'productivity'],
+          lang: 'en',
+          dir: 'ltr',
           icons: [
             {
               src: '/images/icon-512x512.png',
