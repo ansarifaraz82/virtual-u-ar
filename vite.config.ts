@@ -21,9 +21,25 @@ export default defineConfig(({ mode }) => {
           background_color: '#ffffff',
           start_url: '/',
           scope: '/',
+          id: '/',
           display: 'standalone',
           orientation: 'portrait',
           categories: ['shopping', 'lifestyle', 'productivity'],
+          icons: [
+            {
+              src: '/images/icon-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any maskable'
+            }
+          ],
+          screenshots: [
+            {
+              src: '/images/screenshots/screenshots-1.png',
+              type: 'image/png',
+              sizes: '1080x1920' // Example size, adjust if needed
+            }
+          ]
         },
         workbox: {
           runtimeCaching: [
