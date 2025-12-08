@@ -14,13 +14,14 @@ export default defineConfig(({ mode }) => {
       VitePWA({
         registerType: 'autoUpdate',
         manifest: {
-          name: 'SelfLook AR',
-          short_name: 'SelfLook',
+          name: 'Virtual U AR',
+          short_name: 'Virtual',
           description: 'Virtual Try-On AI Application. Upload a photo and try on outfits instantly.',
           theme_color: '#ffffff',
           background_color: '#ffffff',
           start_url: '/',
           scope: '/',
+          id: '/',
           display: 'standalone',
           orientation: 'portrait',
           categories: ['shopping', 'lifestyle', 'productivity'],
