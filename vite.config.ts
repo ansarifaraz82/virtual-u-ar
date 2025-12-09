@@ -43,7 +43,7 @@ export default defineConfig(({ mode }) => {
           ],
           screenshots: [
             {
-              src: '/images/screenshots/screenshot-1.png.png',
+              src: '/images/screenshots/screenshot-1.png',
               sizes: '1080x1920',
               type: 'image/png'
             }
