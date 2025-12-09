@@ -1,106 +1,39 @@
-
 {
   "name": "Virtual U AR",
-  "short_name": "VirtualU",
+  "short_name": "Virtual",
   "description": "Virtual Try-On AI Application. Upload a photo and try on outfits instantly.",
-  "id": "/",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "display_override": ["standalone", "browser"],
-  "orientation": "portrait",
-  "lang": "en",
-  "dir": "ltr",
-  "theme_color": "#ffffff",
   "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "en",
+  "scope": "/",
+  "id": "/",
+  "orientation": "portrait",
+  "categories": [
+    "shopping",
+    "lifestyle",
+    "productivity"
+  ],
+  "dir": "ltr",
   "icons": [
     {
-      "src": "/icons/icon-512x512-maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
+      "src": "/images/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "/screenshots/screen1.png",
-      "sizes": "1080x1920",
-      "type": "image/png",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/screenshots/screen2.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "form_factor": "wide"
+      "src": "/images/screenshots/screenshots-1.png",
+      "type": "image/png"
     }
-  ],
-  "categories": [
-    "shopping",
-    "lifestyle",
-    "image-editing",
-    "photography"
-  ],
-  "shortcuts": [
-    {
-      "name": "Open Camera",
-      "short_name": "Camera",
-      "url": "/camera",
-      "icons": [
-        {
-          "src": "/icons/icon-192x192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "My Gallery",
-      "short_name": "Gallery",
-      "url": "/gallery"
-    }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "files": [
-        {
-          "name": "image",
-          "accept": ["image/*"]
-        }
-      ]
-    }
-  },
-  "file_handlers": [
-    {
-      "action": "/open",
-      "accept": {
-        "image/*": [".jpg", ".jpeg", ".png", ".webp"]
-      }
-    }
-  ],
-  "protocol_handlers": [
-    {
-      "protocol": "web+virtualu",
-      "url": "/?open=%s"
-    }
-  ],
-  "launch_handler": {
-    "client_mode": "navigate"
-  },
-  "prefer_related_applications": false,
-  "related_applications": [],
-  "iarc_rating_id": ""
+  ]
 }

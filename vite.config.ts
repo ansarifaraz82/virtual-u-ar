@@ -29,13 +29,13 @@ export default defineConfig(({ mode }) => {
           dir: 'ltr',
           icons: [
             {
-              src: '/images/icon-512x512.png',
+              src: '/images/android/android-launchericon-512-512.png',
               sizes: '512x512',
               type: 'image/png',
               purpose: 'any'
             },
             {
-              src: '/images/icon-512x512.png',
+              src: '/images/android/android-launchericon-512-512.png',
               sizes: '512x512',
               type: 'image/png',
               purpose: 'maskable'
@@ -43,7 +43,8 @@ export default defineConfig(({ mode }) => {
           ],
           screenshots: [
             {
-              src: '/images/screenshots/screenshots-1.png',
+              src: '/images/screenshots/screenshot-1.png.png',
+              sizes: '1080x1920',
               type: 'image/png'
             }
           ]
