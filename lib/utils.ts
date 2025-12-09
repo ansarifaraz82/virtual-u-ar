@@ -75,7 +75,7 @@ export function getFriendlyErrorMessage(error: unknown, context: string): string
 }
 
 /**
- * Adds a "SelfLook Ar" watermark to the bottom right of an image.
+ * Adds a "Virtual U AR" watermark to the bottom right of an image.
  * @param imageUrl The data URL of the image to watermark.
  * @returns A promise that resolves with the data URL of the watermarked image.
  */
@@ -98,7 +98,7 @@ export const addWatermark = (imageUrl: string): Promise<string> => {
       ctx.drawImage(image, 0, 0);
 
       // --- Watermark styling ---
-      const watermarkText = "SelfLook Ar";
+      const watermarkText = "Virtual U AR";
       // Make font size responsive to image width, with min/max caps
       const baseFontSize = Math.max(18, Math.min(60, canvas.width / 40));
       ctx.font = `600 ${baseFontSize}px Inter, sans-serif`;

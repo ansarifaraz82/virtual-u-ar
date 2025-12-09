@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
         registerType: 'autoUpdate',
         manifest: {
           name: 'Virtual U AR',
-          short_name: 'Virtual',
+          short_name: 'VirtualU',
           description: 'Virtual Try-On AI Application. Upload a photo and try on outfits instantly.',
           theme_color: '#ffffff',
           background_color: '#ffffff',
@@ -44,7 +44,6 @@ export default defineConfig(({ mode }) => {
           screenshots: [
             {
               src: '/images/screenshots/screenshot-1.png',
-              sizes: '1080x1920',
               type: 'image/png'
             }
           ]
