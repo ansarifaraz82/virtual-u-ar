@@ -58,7 +58,7 @@ const handleApiResponse = async (response: GenerateContentResponse): Promise<str
     throw new Error(errorMessage);
 };
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY! });
 // Using gemini-2.5-flash-image for general image generation and editing tasks
 const model = 'gemini-2.5-flash-image';
 
