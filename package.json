@@ -30,6 +30,7 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.3",
     "vite": "^7.2.6",
-    "vite-plugin-pwa": "^1.2.0"
+    "vite-plugin-pwa": "^1.2.0",
+    "webpack-cli": "^5.0.1"
   }
 }
